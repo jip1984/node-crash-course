@@ -47,6 +47,8 @@ router.put('/:id', (req, res) => {
             if (member.id === parseInt(req.params.id)) {
                 member.name = updateMember.name ? updateMember.name : member.name;
                 member.email = updateMember.name ? updateMember.email : member.email;
+
+                res.json({ msg: 'Member updated', member });
             }
         });
     } else {
