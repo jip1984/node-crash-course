@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const exphbs = require('express-handlebars');
 const logger = require('./middleware/loggers');
 const router = require('./routes/api/members');
 
@@ -7,6 +8,7 @@ const app = express();
 
 // //this inits the middleware logger
 // app.use(logger);
+
 
 //body parser middleware
 app.use(express.json());
